@@ -49,7 +49,7 @@ const Footer = () => {
         <div>
           <p className="text-lg font-semibold mb-5 tracking-wide">Get in Touch</p>
           <ul className="flex flex-col gap-2 text-gray-400">
-            <li><a href="tel:+917023495265" className="hover:text-white transition">+91 98405 63538</a></li>
+            <li><a href="tel:+919840563538" className="hover:text-white transition">+91 98405 63538</a></li>
             <li><a href="mailto:bhuvanam1503@gmail.com" className="hover:text-white transition">bhuvanam1503@gmail.com</a></li>
             <li>
               <a href="https://maps.app.goo.gl/youraddress" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">
