@@ -1,5 +1,5 @@
 import React from 'react';
-import { assets } from '../assets/assets';
+import { assets1 } from '../assets/assets';
 
 const Hero = () => {
     const scrollToCollections = () => {
@@ -13,7 +13,7 @@ const Hero = () => {
         <div className="relative w-full h-screen overflow-hidden">
             {/* Background Image */}
             <img
-                src={assets.hero_img}
+                src={assets1.hero_img}
                 alt="Hero Background"
                 className="absolute inset-0 w-full h-full object-cover z-0"
             />

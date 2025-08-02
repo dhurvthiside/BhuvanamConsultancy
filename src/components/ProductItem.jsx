@@ -1,23 +1,47 @@
-import React, { useContext } from 'react'
-import { ShopContext } from '../context/ShopContext'
+import React, { useContext } from 'react';
+import { ShopContext } from '../context/ShopContext';
 import { Link } from 'react-router-dom';
 
-const ProductItem = ({ id, image, name, price }) => {
-
+const ProductItem = ({ id, data }) => {
   const { currency } = useContext(ShopContext);
 
-  return (
-    <Link to={`/product/${id}`} onClick={() => window.scrollTo(0, 0)} className='text-gray-700 cursor-pointer'>
+  const {
+    image,
+    bhk,
+    location,
+    listingType,
+    furnishing,
+    price,
+    rent,
+    deposit,
+  } = data;
 
-      <div className=' overflow-hidden'>
-        <img className='hover:scale-110 transition ease-in-out' src={image[0]} alt="" />
+  const displayPrice = listingType === 'rent'
+    ? `${currency}${rent?.toLocaleString()} Rent`
+    : `${currency}${price?.toLocaleString()}${listingType === 'both' ? ' (Sale)' : ''}`;
+
+  return (
+    <Link
+      to={`/product/${id}`}
+      onClick={() => window.scrollTo(0, 0)}
+      className="text-gray-800 cursor-pointer group"
+    >
+      <div className="overflow-hidden rounded-xl border border-gray-200">
+        <img
+          src={image?.[0]}
+          alt={location}
+          className="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105"
+        />
       </div>
 
-      <p className='pt-3 pb-1 text-sm'>{name}</p>
-      <p className='text-sm font-medium'>{currency}{price}</p>
-      
+      <div className="mt-2 px-1">
+        <p className="font-semibold text-sm truncate">{bhk} | {furnishing}</p>
+        <p className="text-xs text-gray-500 truncate">{location}</p>
+        <p className="text-xs text-blue-600 font-semibold capitalize">{listingType}</p>
+        <p className="text-sm font-bold mt-1">{displayPrice}</p>
+      </div>
     </Link>
-  )
-}
+  );
+};
 
-export default ProductItem
+export default ProductItem;

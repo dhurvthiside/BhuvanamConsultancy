@@ -1,5 +1,5 @@
 import React from 'react';
-import { assets } from '../assets/assets';
+import { assets1 } from '../assets/assets';
 import ContactFloatingButton from '../components/ContactFloatingButton';
 
 const About = () => {
@@ -8,7 +8,7 @@ const About = () => {
       {/* Hero Section */}
       <div className="py-16 px-6 md:px-20">
         <div className="flex flex-col md:flex-row gap-10 items-center">
-          <img src={assets.about_img} alt="About Us" className="w-full md:max-w-[450px] rounded-lg shadow-md" />
+          <img src={assets1.about_img} alt="About Us" className="w-full md:max-w-[450px] rounded-lg shadow-md" />
           <div className="flex flex-col gap-5 md:w-2/3">
             <h1 className="text-4xl font-extrabold mb-2 tracking-wide">About Us</h1>
             <p className="text-gray-700 leading-relaxed">
@@ -29,7 +29,7 @@ const About = () => {
           {/* Rentals */}
           <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
             <div className="mb-4 flex justify-center">
-              <img src={assets.rental_icon || assets.about_img} alt="Rentals" className="h-16 w-16 object-contain" />
+              <img src={assets1.rent_icon || assets1.about_img} alt="Rentals" className="h-16 w-16 object-contain" />
             </div>
             <h3 className="text-xl font-semibold mb-2 text-center">Rental Services</h3>
             <p className="text-sm leading-relaxed">
@@ -40,7 +40,7 @@ const About = () => {
           {/* Buying & Selling */}
           <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
             <div className="mb-4 flex justify-center">
-              <img src={assets.sale_icon || assets.about_img} alt="Sale" className="h-16 w-16 object-contain" />
+              <img src={assets1.sale_icon || assets1.about_img} alt="Sale" className="h-16 w-16 object-contain" />
             </div>
             <h3 className="text-xl font-semibold mb-2 text-center">Buying & Selling</h3>
             <p className="text-sm leading-relaxed">
@@ -51,7 +51,7 @@ const About = () => {
           {/* Property Management */}
           <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
             <div className="mb-4 flex justify-center">
-              <img src={assets.tools_icon || assets.about_img} alt="Management" className="h-16 w-16 object-contain" />
+              <img src={assets1.tools_icon || assets1.about_img} alt="Management" className="h-16 w-16 object-contain" />
             </div>
             <h3 className="text-xl font-semibold mb-2 text-center">Property Management</h3>
             <p className="text-sm leading-relaxed">

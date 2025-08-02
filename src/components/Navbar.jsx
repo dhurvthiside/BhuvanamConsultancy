@@ -1,18 +1,17 @@
 import React, { useState } from 'react';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
-import { assets } from '../assets/assets';
-
+import { assets1 } from '../assets/assets';
 
 const Navbar = () => {
     const [visible, setVisible] = useState(false);
     const navigate = useNavigate();
 
     const handleRentalClick = () => {
-        navigate('/collection', { state: { category: 'Men' } });
+        navigate('/collection', { state: { listingType: 'rent' } });
     };
 
     const handleSaleClick = () => {
-        navigate('/collection', { state: { category: 'Kids' } });
+        navigate('/collection', { state: { listingType: 'sale' } });
     };
 
     const scrollToHash = (id) => {
@@ -21,7 +20,7 @@ const Navbar = () => {
 
     return (
         <div className='w-full bg-[#091d35] text-white tracking-wider text-lg sm:text-xl font-barlow px-4 sm:px-10 py-5 flex justify-between items-center relative z-50'>
-            <Link to='/'><img className='w-44 py-1 sm:w-52' src={assets.logo} alt="Logo" /></Link>
+            <Link to='/'><img className='w-44 py-1 sm:w-52' src={assets1.logo} alt="Logo" /></Link>
 
             <ul className='hidden sm:flex gap-6 items-center ml-auto relative z-50'>
                 <NavLink to="/" className='hover:underline'>Home</NavLink>
@@ -85,13 +84,13 @@ const Navbar = () => {
             </ul>
 
             {/* Mobile Menu Icon */}
-            <img onClick={() => setVisible(true)} className='w-5 cursor-pointer sm:hidden' src={assets.menu_icon} alt="menu" />
+            <img onClick={() => setVisible(true)} className='w-5 cursor-pointer sm:hidden' src={assets1.menu_icon} alt="menu" />
 
             {/* Sidebar for Mobile */}
             <div className={`fixed top-0 right-0 bottom-0 bg-white z-50 text-gray-800 overflow-y-auto transition-all duration-300 ${visible ? 'w-[85%] sm:w-[60%] px-4 pt-6' : 'w-0 px-0 pt-0'}`}>
                 <div className='flex flex-col'>
                     <div onClick={() => setVisible(false)} className='flex items-center gap-4 p-3 border-b'>
-                        <img className='h-4 rotate-180' src={assets.dropdown_icon} alt="back" />
+                        <img className='h-4 rotate-180' src={assets1.dropdown_icon} alt="back" />
                         <p>Back</p>
                     </div>
                     <NavLink onClick={() => setVisible(false)} to="/" className='py-2 pl-4 border-b'>Home</NavLink>

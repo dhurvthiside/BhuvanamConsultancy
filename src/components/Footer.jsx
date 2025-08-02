@@ -1,16 +1,16 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { assets } from '../assets/assets';
+import { assets1 } from '../assets/assets';
 
 const Footer = () => {
   const navigate = useNavigate();
 
   const handleRentalClick = () => {
-    navigate('/collection', { state: { category: 'Men' } });
+    navigate('/collection', { state: { listingType: 'rent' } });
   };
 
   const handleSaleClick = () => {
-    navigate('/collection', { state: { category: 'Kids' } });
+    navigate('/collection', { state: { listingType: 'sale' } });
   };
 
   return (
@@ -19,7 +19,7 @@ const Footer = () => {
 
         {/* Logo and Description */}
         <div>
-          <img className="mb-5 w-40" src={assets.logo} alt="Logo" />
+          <img className="mb-5 w-40" src={assets1.logo} alt="Logo" />
           <p className="w-full md:w-4/5 text-gray-300 leading-relaxed">
             Bhuvanam Consultancy is your trusted partner for real estate solutions — from rentals and sales to property management. We simplify your journey to the perfect space.
           </p>
@@ -49,11 +49,11 @@ const Footer = () => {
         <div>
           <p className="text-lg font-semibold mb-5 tracking-wide">Get in Touch</p>
           <ul className="flex flex-col gap-2 text-gray-400">
-            <li><a href="tel:+917023495265" className="hover:text-white transition">+91 70234 95265</a></li>
-            <li><a href="mailto:bhuvanamconsultancy@gmail.com" className="hover:text-white transition">bhuvanamconsultancy@gmail.com</a></li>
+            <li><a href="tel:+917023495265" className="hover:text-white transition">+91 98405 63538</a></li>
+            <li><a href="mailto:bhuvanam1503@gmail.com" className="hover:text-white transition">bhuvanam1503@gmail.com</a></li>
             <li>
               <a href="https://maps.app.goo.gl/youraddress" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">
-                1043, Sobha Meritta, Pudupakkam,<br />Kelambakkam-Vandalur Rd, Chennai 603103
+                1041, Sobha Meritta, Pudupakkam,<br />Kelambakkam-Vandalur Rd, Chennai 603103
               </a>
             </li>
           </ul>

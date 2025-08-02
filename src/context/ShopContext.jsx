@@ -1,102 +1,66 @@
 import { createContext, useEffect, useState } from "react";
-import { products } from "../assets/assets";
+import { assets } from "../assets/assets";
 import { useNavigate } from "react-router-dom";
-import { toast } from "react-toastify";
 
 export const ShopContext = createContext();
 
-const ShopContextProvider = (props) => {
-
-    const currency = '$';
-    const delivery_fee = 10;
+const ShopContextProvider = ({ children }) => {
     const navigate = useNavigate();
+    const currency = "₹"; // Default currency
+    // All listings (from assets.js)
+    const [properties, setProperties] = useState(assets);
+
+    // Filters
     const [search, setSearch] = useState('');
     const [showSearch, setShowSearch] = useState(false);
-    const [cartItems, setCartItems] = useState({});
+    const [filterType, setFilterType] = useState("all"); // 'rent', 'sale', 'all'
+    const [filterBHK, setFilterBHK] = useState("all");    // '1', '2', '3', 'all'
+    const [filterPrice, setFilterPrice] = useState({ min: 0, max: Infinity });
 
-    const addToCart = async (itemId, size) => {
+    // Filtered results
+    const getFilteredProperties = () => {
+        return properties.filter(property => {
+            const matchesType =
+                filterType === 'all' ||
+                property.listingType === filterType ||
+                (filterType === 'rent' && property.listingType === 'both') ||
+                (filterType === 'sale' && property.listingType === 'both');
 
-        if (!size) {
-            toast.error('Select product size');
-            return;
-        }
+            const bhkNumber = property.bhk.replace('BHK', ''); // "3BHK" → "3"
+            const matchesBHK = filterBHK === 'all' || bhkNumber === filterBHK;
 
-        let cartData = structuredClone(cartItems);
+            const matchesPrice =
+                property.price >= filterPrice.min && property.price <= filterPrice.max;
 
-        if (cartData[itemId]) {
-            if (cartData[itemId][size]) {
-                cartData[itemId][size] += 1;
-            }
-            else {
-                cartData[itemId][size] = 1;
-            }
-        }
-        else {
-            cartData[itemId] = {};
-            cartData[itemId][size] = 1
-        }
-        setCartItems(cartData)
+            const matchesSearch =
+                search.trim() === '' ||
+                property.location.toLowerCase().includes(search.toLowerCase());
 
-    }
+            return matchesType && matchesBHK && matchesPrice && matchesSearch;
+        });
+    };
 
-    const updateQuantity = async (itemId, size, quantity) => {
-
-        let cartData = structuredClone(cartItems);
-        cartData[itemId][size] = quantity;
-        setCartItems(cartData);
-
-    }
-
-    const getCartCount = () => {
-        let totalCount = 0;
-        for (const items in cartItems) {
-            for (const item in cartItems[items]) {
-                try {
-                    if (cartItems[items][item] > 0) {
-                        totalCount += cartItems[items][item];
-                    }
-                } catch (error) {
-                }
-            }
-        }
-        return totalCount;
-    }
-
-    const getCartAmount = () => {
-        let totalAmount = 0;
-        for (const items in cartItems) {
-            let itemInfo = products.find((product) => product._id === items);
-            for (const item in cartItems[items]) {
-                try {
-                    if (cartItems[items][item] > 0) {
-                        totalAmount += itemInfo.price * cartItems[items][item];
-                    }
-                } catch (error) {
-                }
-            }
-        }
-        return totalAmount;
-    }
 
     const value = {
-        currency, delivery_fee,
-        products,
         navigate,
+
+        // Listings
+        properties,
+        getFilteredProperties,
+        currency,
+        // Filters & UI
         search, setSearch,
         showSearch, setShowSearch,
-        addToCart, updateQuantity,
-        cartItems,
-        getCartCount, getCartAmount
-
-    }
+        filterType, setFilterType,
+        filterBHK, setFilterBHK,
+        filterPrice, setFilterPrice
+    };
 
     return (
         <ShopContext.Provider value={value}>
-            {props.children}
+            {children}
         </ShopContext.Provider>
-    )
-
-
-}
+    );
+};
 
 export default ShopContextProvider;
