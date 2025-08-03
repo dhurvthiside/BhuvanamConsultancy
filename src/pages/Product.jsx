@@ -119,10 +119,10 @@ const Product = () => {
           {product.listingType === 'both' && (
             <div className="space-y-2">
               <p className="text-xl sm:text-2xl font-semibold text-green-600">
-                ₹{product.price?.toLocaleString()} (Sale)
+                ₹{product.price?.toLocaleString('en-IN')} (Sale)
               </p>
               <p className="text-xl sm:text-2xl font-semibold text-blue-600">
-                ₹{product.rent?.toLocaleString()} /month (Rent)
+                ₹{product.rent?.toLocaleString('en-IN')} /month (Rent)
               </p>
             </div>
           )}
