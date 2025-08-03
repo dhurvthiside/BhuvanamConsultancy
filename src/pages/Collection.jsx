@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import Title from '../components/Title';
 import PropertyItem from '../components/ProductItem';
 import { ShopContext } from '../context/ShopContext';
+import dropdownIcon from '../assets/dropdown_icon.png';
 
 const Collection = () => {
   const {
@@ -56,7 +57,7 @@ const Collection = () => {
       <div className='min-w-60'>
         <p onClick={() => setShowFilter(!showFilter)} className='my-2 text-xl flex items-center cursor-pointer gap-2'>
           FILTERS
-          <img className={`h-3 sm:hidden ${showFilter ? 'rotate-90' : ''}`} src="/icons/dropdown.svg" alt="Toggle" />
+          <img className={`h-3 sm:hidden ${showFilter ? 'rotate-90' : ''}`} src={dropdownIcon} alt="Toggle" />
         </p>
 
         {/* Listing Type Filter */}
