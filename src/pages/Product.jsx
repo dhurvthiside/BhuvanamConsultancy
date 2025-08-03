@@ -106,13 +106,13 @@ const Product = () => {
           {/* Price / Rent */}
           {product.listingType === 'sale' && (
             <p className="text-xl sm:text-2xl font-semibold text-green-600">
-              ₹{product.price?.toLocaleString()}
+              ₹{product.price?.toLocaleString('en-IN')}
             </p>
           )}
 
           {product.listingType === 'rent' && (
             <p className="text-xl sm:text-2xl font-semibold text-blue-600">
-              ₹{product.rent?.toLocaleString()} /month
+              ₹{product.rent?.toLocaleString('en-IN')} /month
             </p>
           )}
 

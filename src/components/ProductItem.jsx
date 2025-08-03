@@ -17,8 +17,8 @@ const ProductItem = ({ id, data }) => {
   } = data;
 
   const displayPrice = listingType === 'rent'
-    ? `${currency}${rent?.toLocaleString()} Rent`
-    : `${currency}${price?.toLocaleString()}${listingType === 'both' ? ' (Sale)' : ''}`;
+    ? `${currency}${rent?.toLocaleString('en-IN')} Rent`
+    : `${currency}${price?.toLocaleString('en-IN')}${listingType === 'both' ? ' (Sale)' : ''}`;
 
   return (
     <Link
