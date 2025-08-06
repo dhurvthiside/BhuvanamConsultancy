@@ -1,4 +1,5 @@
 import React from 'react'
+import { Analytics } from '@vercel/analytics/react';
 import Navbar from './components/Navbar'
 import { Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
@@ -37,6 +38,7 @@ const App = () => {
         <Route path='/management' element={<PropertyManagement />} />
       </Routes>
       <Footer />
+      <Analytics />
     </div>
   )
 }
