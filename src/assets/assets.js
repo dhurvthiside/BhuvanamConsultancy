@@ -1,51 +1,73 @@
 // assets.js
 
-import p1_1 from './p1_1.jpg';
-import p1_2 from './p1_2.jpg';
-import p1_3 from './p1_3.jpg';
-import p1_4 from './p1_4.jpg';
-import p1_5 from './p1_5.jpg';
-import p1_6 from './p1_6.jpg';
-import p1_7 from './p1_7.jpg';
+// =========================
+// PROPERTY IMAGES
+// =========================
 
-import p2_1 from './p2_1.jpg';
-import p2_2 from './p2_2.jpg';
-import p2_3 from './p2_3.jpg';
-import p2_4 from './p2_4.jpg';
-import p2_5 from './p2_5.jpg';
-import p2_6 from './p2_6.jpg';
-import p2_7 from './p2_7.jpg';
+// // Property 1
+// import p1_1 from './p1_1.jpg';
+// import p1_2 from './p1_2.jpg';
+// import p1_3 from './p1_3.jpg';
+// import p1_4 from './p1_4.jpg';
 
-import p3_1 from './p3_1.jpg';
-import p3_2 from './p3_2.jpg';
-import p3_3 from './p3_3.jpg';
-import p3_4 from './p3_4.jpg';
-import p3_5 from './p3_5.jpg';
+// // Property 2
+// import p2_1 from './p2_1.jpg';
+// import p2_2 from './p2_2.jpg';
+// import p2_3 from './p2_3.jpg';
+// import p2_4 from './p2_4.jpg';
 
-import p4_1 from './p4_1.jpg';
-import p4_2 from './p4_2.jpg';
-import p4_3 from './p4_3.jpg';
-import p4_4 from './p4_4.jpg';
-import p4_5 from './p4_5.jpg';
-import p4_6 from './p4_6.jpg';
-import p4_7 from './p4_7.jpg';
+// // Property 3
+// import p3_1 from './p3_1.jpg';
+// import p3_2 from './p3_2.jpg';
+// import p3_3 from './p3_3.jpg';
+// import p3_4 from './p3_4.jpg';
 
-import p5_1 from './p5_1.jpg';
-import p5_2 from './p5_2.jpg';
-import p5_3 from './p5_3.jpg';
-import p5_4 from './p5_4.jpg';
-import p5_5 from './p5_5.jpg';
-import p5_6 from './p5_6.jpg';
-import p5_7 from './p5_7.jpg';
-import p5_8 from './p5_8.jpg';
+// // Property 4
+// import p4_1 from './p4_1.jpg';
+// import p4_2 from './p4_2.jpg';
+// import p4_3 from './p4_3.jpg';
+// import p4_4 from './p4_4.jpg';
 
-import p6_1 from './p6_1.jpg';
-import p6_2 from './p6_2.jpg';
-import p6_3 from './p6_3.jpg';
-import p6_4 from './p6_4.jpg';
-import p6_5 from './p6_5.jpg';
-import p6_6 from './p6_6.jpg';
-import p6_7 from './p6_7.jpg';
+// // Property 5
+// import p5_1 from './p5_1.jpg';
+// import p5_2 from './p5_2.jpg';
+// import p5_3 from './p5_3.jpg';
+// import p5_4 from './p5_4.jpg';
+
+// // Property 6
+// import p6_1 from './p6_1.jpg';
+// import p6_2 from './p6_2.jpg';
+// import p6_3 from './p6_3.jpg';
+// import p6_4 from './p6_4.jpg';
+
+// // Property 7
+// import p7_1 from './p7_1.jpg';
+// import p7_2 from './p7_2.jpg';
+// import p7_3 from './p7_3.jpg';
+// import p7_4 from './p7_4.jpg';
+
+// // Property 8
+// import p8_1 from './p8_1.jpg';
+// import p8_2 from './p8_2.jpg';
+// import p8_3 from './p8_3.jpg';
+// import p8_4 from './p8_4.jpg';
+
+// Property 9
+import p9_1 from './p9_1.jpg';
+import p9_2 from './p9_2.jpg';
+
+
+// Property 10
+import p10_1 from './p10_1.jpg';
+import p10_2 from './p10_2.jpg';
+import p10_3 from './p10_3.jpg';
+import p10_4 from './p10_4.jpg';
+import p10_5 from './p10_5.jpg';
+import p10_6 from './p10_6.jpg';
+
+// =========================
+// GENERAL WEBSITE ASSETS
+// =========================
 
 import logo from './logo.png';
 import hero_img from './hero_img.png';
@@ -55,91 +77,432 @@ import dropdown_icon from './dropdown_icon.png';
 import rent_icon from './rent_icon.png';
 import sale_icon from './sale_icon.png';
 import tools_icon from './management.jpg';
+
+
+// =========================
+// GENERAL ASSETS EXPORT
+// =========================
+
 export const assets1 = {
-    logo,
-    hero_img,
-    menu_icon,
-    about_img,
-    dropdown_icon,
-    rent_icon,
-    sale_icon,
-    tools_icon,
-}
+  logo,
+  hero_img,
+  menu_icon,
+  about_img,
+  dropdown_icon,
+  rent_icon,
+  sale_icon,
+  tools_icon,
+};
+
+
+// =========================
+// PROPERTY LISTINGS
+// =========================
+
 export const assets = [
+
+  // ---------------------------------
+  // SALE 1
+  // ---------------------------------
+
   {
     id: 1,
-    listingType: "rent",
-    bhk: "3BHK",
-    furnishing: "Fully Furnished",
-    builtUpArea: 1996,
-    rent: 50000,
-    deposit: 300000,
-    price: 0,
-    location: "Sobha Meritta",
-    preference: "Family",
-    image: [p1_1, p1_2, p1_3, p1_4, p1_5, p1_6, p1_7],
+    listingType: "sale",
+    propertyType: "Land",
+    propertyStatus: "Resale",
+
+    builtUpArea: null,
+    area: 3845,
+    uds: null,
+
+    bhk: null,
+    furnishing: null,
+    doorFacing: null,
+
+    ageOfHouse: null,
+    noOfHouses: null,
+    noOfFloors: null,
+    floorNo: null,
+    noOfHousesPerFloor: null,
+
+    rent: null,
+    deposit: null,
+    price: 7500,
+    priceUnit: "per sq.ft.",
+
+    location: "Navalur (Thalambur)",
+    landmark: "Near Intellect Software Company",
+
+    parking: null,
+
+    image: [],
   },
+
+
+  // ---------------------------------
+  // SALE 2
+  // ---------------------------------
+
   {
     id: 2,
     listingType: "sale",
-    bhk: "3BHK",
-    furnishing: "Semi Furnished",
-    builtUpArea: 1996,
+    propertyType: "Apartment",
+    propertyStatus: "Resale",
+
+    builtUpArea: 945,
+    area: null,
+    uds: 636,
+
+    bhk: null,
+    furnishing: null,
+    doorFacing: null,
+
+    ageOfHouse: 20,
+    noOfHouses: 4,
+    noOfFloors: null,
+    floorNo: null,
+    noOfHousesPerFloor: null,
+
     rent: null,
     deposit: null,
-    price: 9500000,
-    location: "Sobha Meritta, Pudhupakkam (Kelambakkam - Vandalur Road)",
-    image: [p2_1, p2_2, p2_3, p2_4, p2_5, p2_6, p2_7],
+    price: 9000,
+    priceUnit: "per sq.ft.",
+
+    location: "Kotturpuram",
+    landmark: "Near Railway Station",
+
+    parking: "Only 2 Wheeler Parking",
+
+    image: [],
   },
+
+
+  // ---------------------------------
+  // SALE 3
+  // ---------------------------------
+
   {
     id: 3,
     listingType: "sale",
-    bhk: "1BHK",
-    furnishing: "Semi Furnished",
-    builtUpArea: 542,
+    propertyType: "Apartment",
+    propertyStatus: "Resale",
+
+    builtUpArea: 580,
+    area: null,
+    uds: 435,
+
+    bhk: null,
+    furnishing: null,
+    doorFacing: null,
+
+    ageOfHouse: 28,
+    noOfHouses: 9,
+    noOfFloors: null,
+    floorNo: null,
+    noOfHousesPerFloor: null,
+
     rent: null,
     deposit: null,
-    price: 3000000,
-    location: "Sobha Meritta",
-    image: [p3_1, p3_2, p3_3, p3_4, p3_5],
+    price: 15517,
+    priceUnit: "per sq.ft.",
+
+    location: "Mylapore",
+    landmark: null,
+
+    parking: "Only 2 Wheeler Parking",
+
+    image: [],
   },
+
+
+  // ---------------------------------
+  // SALE 4
+  // ---------------------------------
+
   {
     id: 4,
-    listingType: "both",
-    bhk: "3BHK",
+    listingType: "sale",
+    propertyType: "Apartment",
+    propertyStatus: "Resale",
+
+    apartmentName: "Sobha Meritta",
+
+    builtUpArea: 1337,
+    area: null,
+    uds: 435,
+
+    bhk: null,
     furnishing: "Unfurnished",
-    builtUpArea: 1996,
+    doorFacing: "West",
+
+    ageOfHouse: 10,
+    noOfHouses: null,
+    noOfFloors: 13,
+    floorNo: 12,
+    noOfHousesPerFloor: 4,
+
     rent: null,
     deposit: null,
-    price: 11000000,
-    location: "Sobha Meritta",
-    image: [p4_1, p4_2, p4_3, p4_4, p4_5, p4_6, p4_7],
+    price: 8500000,
+    priceUnit: "Negotiable",
+
+    location: "Pudupakkam",
+    landmark: "Opp. to Butterfly Industries",
+
+    parking: null,
+
+    image: [],
   },
+
+
+  // ---------------------------------
+  // SALE 5
+  // ---------------------------------
+
   {
     id: 5,
-    listingType: "both",
-    bhk: "3BHK",
-    furnishing: "Fully Furnished",
-    builtUpArea: 1996,
+    listingType: "sale",
+    propertyType: "Apartment",
+    propertyStatus: "Resale",
+
+    builtUpArea: 930,
+    area: null,
+    uds: 375,
+
+    bhk: null,
+    furnishing: "Semi Furnished",
+    doorFacing: null,
+
+    ageOfHouse: "10+ years",
+    noOfHouses: null,
+    noOfFloors: null,
+    floorNo: null,
+    noOfHousesPerFloor: null,
+
     rent: null,
     deposit: null,
-    price: 12000000,
-    location: "Sobha Meritta",
-    image: [p5_1, p5_2, p5_3, p5_4, p5_5, p5_6, p5_7, p5_8],
+    price: 18000000,
+    priceUnit: "Total",
+
+    location: "Abhiramapuram",
+    landmark: null,
+
+    parking: "Open Car Parking",
+
+    image: [],
   },
+
+
+  // ---------------------------------
+  // SALE 6
+  // ---------------------------------
+
   {
     id: 6,
     listingType: "sale",
-    bhk: "3BHK",
-    furnishing: "Semi Furnished",
-    builtUpArea: 1996,
+    propertyType: "Apartment",
+    propertyStatus: "Resale",
+
+    apartmentName: "Sobha Meritta",
+
+    builtUpArea: 1337,
+    area: null,
+    uds: 435,
+
+    bhk: null,
+    furnishing: "Unfurnished",
+    doorFacing: "South",
+
+    ageOfHouse: 10,
+    noOfHouses: null,
+    noOfFloors: 13,
+    floorNo: 11,
+    noOfHousesPerFloor: 4,
+
     rent: null,
     deposit: null,
-    price: 13500000,
-    location: "Sobha Meritta",
-    image: [p6_1, p6_2, p6_3, p6_4, p6_5, p6_6, p6_7],
-  },
-  
-];
-export { logo, hero_img };
+    price: 8000000,
+    priceUnit: "Total",
 
+    location: "Pudupakkam",
+    landmark: "Opp. to Butterfly Industries",
+
+    parking: "Covered Car Parking",
+
+    image: [],
+  },
+
+
+  // ---------------------------------
+  // SALE 7
+  // ---------------------------------
+
+  {
+    id: 7,
+    listingType: "sale",
+    propertyType: "Apartment",
+    propertyStatus: "Resale",
+
+    apartmentName: "Sobha Meritta",
+
+    builtUpArea: 1650,
+    area: null,
+    uds: 570,
+
+    bhk: null,
+    furnishing: "Semi Furnished",
+    doorFacing: "West",
+
+    ageOfHouse: 10,
+    noOfHouses: null,
+    noOfFloors: 13,
+    floorNo: 9,
+    noOfHousesPerFloor: 4,
+
+    rent: null,
+    deposit: null,
+    price: 10000000,
+    priceUnit: "Total",
+
+    location: "Pudupakkam",
+    landmark: "Opp. to Butterfly Industries",
+
+    parking: null,
+
+    image: [],
+  },
+
+
+  // ---------------------------------
+  // SALE 8
+  // ---------------------------------
+
+  {
+    id: 8,
+    listingType: "sale",
+    propertyType: "Apartment",
+    propertyStatus: "Resale",
+
+    apartmentName: "Sobha Meritta",
+
+    builtUpArea: 1650,
+    area: null,
+    uds: 570,
+
+    bhk: null,
+    furnishing: "Semi Furnished",
+    doorFacing: "West",
+
+    ageOfHouse: 10,
+    noOfHouses: null,
+    noOfFloors: 13,
+    floorNo: 9,
+    noOfHousesPerFloor: 4,
+
+    rent: null,
+    deposit: null,
+    price: 10000000,
+    priceUnit: "Total",
+
+    location: "Pudupakkam",
+    landmark: "Opp. to Butterfly Industries",
+
+    parking: null,
+
+    image: [],
+  },
+
+
+  // ---------------------------------
+  // RENTAL 1
+  // ---------------------------------
+
+  {
+    id: 9,
+    listingType: "rent",
+    propertyType: "Apartment",
+    propertyStatus: "Rental",
+
+    apartmentName: "Sobha Meritta",
+
+    builtUpArea: 1996,
+    area: null,
+    uds: null,
+
+    bhk: null,
+    furnishing: "Semi Furnished",
+    doorFacing: "East",
+
+    ageOfHouse: null,
+    noOfHouses: null,
+    noOfFloors: 13,
+    floorNo: 9,
+    noOfHousesPerFloor: null,
+
+    rent: 42500,
+    deposit: null,
+    price: null,
+    priceUnit: null,
+
+    location: "Pudupakkam",
+    landmark: "Opp. to Butterfly Industries",
+
+    parking: null,
+
+    rentalNotes:
+      "Rent includes maintenance and amenities inside the community.",
+
+    image: [p9_1, p9_2],
+  },
+
+
+  // ---------------------------------
+  // RENTAL 2
+  // ---------------------------------
+
+  {
+    id: 10,
+    listingType: "rent",
+    propertyType: "Apartment",
+    propertyStatus: "Rental",
+
+    apartmentName: "Sobha Meritta",
+
+    builtUpArea: 1337,
+    area: null,
+    uds: null,
+
+    bhk: null,
+    furnishing: "Fully Furnished",
+    doorFacing: "North",
+
+    ageOfHouse: null,
+    noOfHouses: null,
+    noOfFloors: 13,
+    floorNo: 7,
+    noOfHousesPerFloor: null,
+
+    rent: 36000,
+    deposit: null,
+    price: null,
+    priceUnit: null,
+
+    location: "Pudupakkam",
+    landmark: "Opp. to Butterfly Industries",
+
+    parking: null,
+
+    rentalNotes:
+      "Rent includes maintenance and amenities inside the community.",
+
+    image: [p10_1, p10_2, p10_3, p10_4, p10_5, p10_6],
+  },
+
+];
+
+
+// =========================
+// NAMED EXPORTS
+// =========================
+
+export { logo, hero_img };
