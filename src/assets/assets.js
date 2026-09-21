@@ -126,7 +126,7 @@ export const assets = [
 
     parking: "Only 2 Wheeler Parking",
 
-    image: [p9_1],
+    image: [],
   },
 
 
@@ -164,7 +164,7 @@ export const assets = [
 
     parking: "Only 2 Wheeler Parking",
 
-    image: [p9_1],
+    image: [],
   },
 
 
@@ -204,7 +204,7 @@ export const assets = [
 
     parking: null,
 
-    image: [p9_1],
+    image: [],
   },
 
 
@@ -242,7 +242,7 @@ export const assets = [
 
     parking: "Open Car Parking",
 
-    image: [p9_1],
+    image: [],
   },
 
 
@@ -282,7 +282,7 @@ export const assets = [
 
     parking: "Covered Car Parking",
 
-    image: [p9_1],
+    image: [],
   },
 
 
@@ -322,7 +322,7 @@ export const assets = [
 
     parking: null,
 
-    image: [p9_1],
+    image: [],
   },
 
 
@@ -362,7 +362,7 @@ export const assets = [
 
     parking: null,
 
-    image: [p9_1],
+    image: [],
   },
 
 
