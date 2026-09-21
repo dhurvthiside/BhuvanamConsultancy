@@ -88,7 +88,7 @@ export const assets = [
 
     parking: null,
 
-    image: [p9_1],
+    image: [],
   },
 
 
