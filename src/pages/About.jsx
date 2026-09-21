@@ -12,7 +12,7 @@ const About = () => {
           <div className="flex flex-col gap-5 md:w-2/3">
             <h1 className="text-4xl font-extrabold mb-2 tracking-wide">About Us</h1>
             <p className="text-gray-700 leading-relaxed">
-              Bhuvanam was launched in 2023 by <strong>Ramakrishnan</strong> and <strong>Uma Ramakrishnan</strong>. With a strong background in customer service and prior experience running small businesses, they built Bhuvanam Real Estate Consultancy from the ground up. What started as a business soon became a heartfelt passion — a way to simplify the lives of those seeking homes and property support.
+              Bhuvanam was launched in 2023 by <strong>Ramakrishnan</strong>. With a strong background in customer service and prior experience running small businesses, they built Bhuvanam Real Estate Consultancy from the ground up. What started as a business soon became a heartfelt passion — a way to simplify the lives of those seeking homes and property support.
             </p>
             <p className="text-gray-700 leading-relaxed">
               Their dedication goes beyond just closing deals — their true joy comes from delivering quality and achieving customer satisfaction at every step.
