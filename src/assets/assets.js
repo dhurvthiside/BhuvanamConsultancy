@@ -4,7 +4,6 @@
 // PROPERTY IMAGES
 // =========================
 
-
 // Property 9
 import p9_1 from './p9_1.jpg';
 import p9_2 from './p9_2.jpg';
@@ -49,406 +48,668 @@ export const assets1 = {
 
 
 // =========================
-// PROPERTY LISTINGS
+// PROPERTY LISTINGS (STANDARDIZED SCHEMA)
 // =========================
 
 export const assets = [
 
   // ---------------------------------
-  // SALE 1
+  // PROPERTY 1: PLOT FOR SALE
   // ---------------------------------
-
   {
     id: 1,
+    title: "3845 Sq.Ft. Residential Land for Sale in Navalur",
     listingType: "sale",
-    propertyType: "Land",
-    propertyStatus: "Resale",
+    propertyType: "plot",
+    buildingCategory: "standalone",
+    propertyStatus: "resale",
 
-    builtUpArea: null,
-    area: 3845,
-    uds: null,
+    location: {
+      address: "Navalur (Thalambur)",
+      locality: "Navalur",
+      city: "Chennai",
+      landmark: "Near Intellect Software Company",
+    },
 
-    bhk: null,
-    furnishing: null,
-    doorFacing: null,
+    pricing: {
+      totalPrice: 28837500, // 3845 sqft * 7500 per sqft
+      pricePerSqFt: 7500,
+      isNegotiable: true,
+    },
 
-    ageOfHouse: null,
-    noOfHouses: null,
-    noOfFloors: null,
-    floorNo: null,
-    noOfHousesPerFloor: null,
+    areaDetails: {
+      plotAreaSqFt: 3845,
+    },
 
-    rent: null,
-    deposit: null,
-    price: 7500,
-    priceUnit: "per sq.ft.",
+    plotDetails: {
+      plotFacing: "east",
+      cornerPlot: false,
+      boundaryWall: true,
+      roadWidthFt: 30,
+      approvals: ["CMDA", "DTCP"],
+    },
 
-    location: "Navalur (Thalambur)",
-    landmark: "Near Intellect Software Company",
+    amenities: [
+      "Blacktop Road Access",
+      "Street Lights",
+      "Water Line Connection Ready",
+      "Gated Plot Boundary",
+      "Close to IT Hub"
+    ],
 
-    parking: null,
-
-    image: [],
+    images: [],
+    featured: false,
+    postedAt: "2026-03-01",
   },
 
 
   // ---------------------------------
-  // SALE 2
+  // PROPERTY 2: STANDALONE APARTMENT SALE
   // ---------------------------------
-
   {
     id: 2,
+    title: "2 BHK Standalone Apartment for Sale in Kotturpuram",
     listingType: "sale",
-    propertyType: "Apartment",
-    propertyStatus: "Resale",
+    propertyType: "apartment",
+    buildingCategory: "standalone",
+    propertyStatus: "resale",
 
-    builtUpArea: 945,
-    area: null,
-    uds: 636,
+    location: {
+      address: "Kotturpuram, Near Railway Station",
+      locality: "Kotturpuram",
+      city: "Chennai",
+      landmark: "Near Railway Station",
+    },
 
-    bhk: null,
-    furnishing: null,
-    doorFacing: null,
+    pricing: {
+      totalPrice: 8505000, // 945 sqft * 9000 per sqft
+      pricePerSqFt: 9000,
+      isNegotiable: true,
+      maintenanceCharge: 1500,
+    },
 
-    ageOfHouse: 20,
-    noOfHouses: 4,
-    noOfFloors: null,
-    floorNo: null,
-    noOfHousesPerFloor: null,
+    areaDetails: {
+      builtUpAreaSqFt: 945,
+      udsSqFt: 636,
+    },
 
-    rent: null,
-    deposit: null,
-    price: 9000,
-    priceUnit: "per sq.ft.",
+    residentialDetails: {
+      bhk: 2,
+      bathrooms: 2,
+      balconies: 1,
+      furnishing: "semi_furnished",
+      doorFacing: "north",
+      ageOfPropertyYears: 20,
+      floorDetails: {
+        floorNo: 2,
+        totalFloors: 3,
+        unitsPerFloor: 2,
+      },
+      parking: {
+        coveredCar: 0,
+        openCar: 0,
+        twoWheeler: true,
+      },
+    },
 
-    location: "Kotturpuram",
-    landmark: "Near Railway Station",
+    amenities: [
+      "2 Wheeler Parking",
+      "Metro Water Connection",
+      "Borewell Water",
+      "CCTV in Common Area"
+    ],
 
-    parking: "Only 2 Wheeler Parking",
-
-    image: [],
+    images: [],
+    featured: false,
+    postedAt: "2026-03-05",
   },
 
 
   // ---------------------------------
-  // SALE 3
+  // PROPERTY 3: STANDALONE APARTMENT SALE
   // ---------------------------------
-
   {
     id: 3,
+    title: "1 BHK Resale Apartment for Sale in Mylapore",
     listingType: "sale",
-    propertyType: "Apartment",
-    propertyStatus: "Resale",
+    propertyType: "apartment",
+    buildingCategory: "standalone",
+    propertyStatus: "resale",
 
-    builtUpArea: 580,
-    area: null,
-    uds: 435,
+    location: {
+      address: "Mylapore Main Area",
+      locality: "Mylapore",
+      city: "Chennai",
+    },
 
-    bhk: null,
-    furnishing: null,
-    doorFacing: null,
+    pricing: {
+      totalPrice: 8999860, // 580 sqft * 15517 per sqft
+      pricePerSqFt: 15517,
+      isNegotiable: false,
+      maintenanceCharge: 1200,
+    },
 
-    ageOfHouse: 28,
-    noOfHouses: 9,
-    noOfFloors: null,
-    floorNo: null,
-    noOfHousesPerFloor: null,
+    areaDetails: {
+      builtUpAreaSqFt: 580,
+      udsSqFt: 435,
+    },
 
-    rent: null,
-    deposit: null,
-    price: 15517,
-    priceUnit: "per sq.ft.",
+    residentialDetails: {
+      bhk: 1,
+      bathrooms: 1,
+      balconies: 1,
+      furnishing: "unfurnished",
+      doorFacing: "east",
+      ageOfPropertyYears: 28,
+      floorDetails: {
+        floorNo: 1,
+        totalFloors: 3,
+        unitsPerFloor: 3,
+      },
+      parking: {
+        coveredCar: 0,
+        openCar: 0,
+        twoWheeler: true,
+      },
+    },
 
-    location: "Mylapore",
-    landmark: null,
+    amenities: [
+      "2 Wheeler Dedicated Parking",
+      "Metro Water Access",
+      "Borewell",
+      "Close to Temples & Metro"
+    ],
 
-    parking: "Only 2 Wheeler Parking",
-
-    image: [],
+    images: [],
+    featured: false,
+    postedAt: "2026-03-08",
   },
 
 
   // ---------------------------------
-  // SALE 4
+  // PROPERTY 4: SOCIETY APARTMENT SALE
   // ---------------------------------
-
   {
     id: 4,
+    title: "3 BHK Unfurnished Apartment in Sobha Meritta",
     listingType: "sale",
-    propertyType: "Apartment",
-    propertyStatus: "Resale",
+    propertyType: "apartment",
+    buildingCategory: "society",
+    propertyStatus: "resale",
 
-    apartmentName: "Sobha Meritta",
+    location: {
+      address: "Pudupakkam, OMR",
+      locality: "Pudupakkam",
+      city: "Chennai",
+      landmark: "Opp. to Butterfly Industries",
+    },
 
-    builtUpArea: 1337,
-    area: null,
-    uds: 435,
+    pricing: {
+      totalPrice: 8500000,
+      pricePerSqFt: 6357,
+      isNegotiable: true,
+      maintenanceCharge: 3500,
+    },
 
-    bhk: null,
-    furnishing: "Unfurnished",
-    doorFacing: "West",
+    areaDetails: {
+      builtUpAreaSqFt: 1337,
+      udsSqFt: 435,
+    },
 
-    ageOfHouse: 10,
-    noOfHouses: null,
-    noOfFloors: 13,
-    floorNo: 12,
-    noOfHousesPerFloor: 4,
+    residentialDetails: {
+      bhk: 3,
+      bathrooms: 2,
+      balconies: 1,
+      furnishing: "unfurnished",
+      doorFacing: "west",
+      ageOfPropertyYears: 10,
+      floorDetails: {
+        floorNo: 12,
+        totalFloors: 13,
+        unitsPerFloor: 4,
+      },
+      parking: {
+        coveredCar: 1,
+        openCar: 0,
+        twoWheeler: true,
+      },
+    },
 
-    rent: null,
-    deposit: null,
-    price: 8500000,
-    priceUnit: "Negotiable",
+    societyDetails: {
+      societyName: "Sobha Meritta",
+      totalTowers: 5,
+    },
 
-    location: "Pudupakkam",
-    landmark: "Opp. to Butterfly Industries",
+    amenities: [
+      "24/7 Security Guard",
+      "Full Power Backup",
+      "Elevators / Lifts",
+      "Clubhouse",
+      "Swimming Pool",
+      "Gymnasium",
+      "Children's Play Area",
+      "Intercom Facility"
+    ],
 
-    parking: null,
-
-    image: [],
+    images: [],
+    featured: true,
+    postedAt: "2026-03-12",
   },
 
 
   // ---------------------------------
-  // SALE 5
+  // PROPERTY 5: STANDALONE APARTMENT SALE
   // ---------------------------------
-
   {
     id: 5,
+    title: "2 BHK Semi-Furnished Flat for Sale in Abhiramapuram",
     listingType: "sale",
-    propertyType: "Apartment",
-    propertyStatus: "Resale",
+    propertyType: "flat",
+    buildingCategory: "standalone",
+    propertyStatus: "resale",
 
-    builtUpArea: 930,
-    area: null,
-    uds: 375,
+    location: {
+      address: "Abhiramapuram Main Road",
+      locality: "Abhiramapuram",
+      city: "Chennai",
+    },
 
-    bhk: null,
-    furnishing: "Semi Furnished",
-    doorFacing: null,
+    pricing: {
+      totalPrice: 18000000,
+      pricePerSqFt: 19354,
+      isNegotiable: false,
+      maintenanceCharge: 2500,
+    },
 
-    ageOfHouse: "10+ years",
-    noOfHouses: null,
-    noOfFloors: null,
-    floorNo: null,
-    noOfHousesPerFloor: null,
+    areaDetails: {
+      builtUpAreaSqFt: 930,
+      udsSqFt: 375,
+    },
 
-    rent: null,
-    deposit: null,
-    price: 18000000,
-    priceUnit: "Total",
+    residentialDetails: {
+      bhk: 2,
+      bathrooms: 2,
+      balconies: 1,
+      furnishing: "semi_furnished",
+      doorFacing: "south",
+      ageOfPropertyYears: 10,
+      floorDetails: {
+        floorNo: 2,
+        totalFloors: 3,
+      },
+      parking: {
+        coveredCar: 0,
+        openCar: 1,
+        twoWheeler: true,
+      },
+    },
 
-    location: "Abhiramapuram",
-    landmark: null,
+    amenities: [
+      "Open Car Parking Slot",
+      "Lift Available",
+      "Metro Water Connection",
+      "Borewell Water",
+      "CCTV Surveillance"
+    ],
 
-    parking: "Open Car Parking",
-
-    image: [],
+    images: [],
+    featured: false,
+    postedAt: "2026-03-15",
   },
 
 
   // ---------------------------------
-  // SALE 6
+  // PROPERTY 6: SOCIETY APARTMENT SALE
   // ---------------------------------
-
   {
     id: 6,
+    title: "3 BHK Resale Apartment for Sale in Sobha Meritta",
     listingType: "sale",
-    propertyType: "Apartment",
-    propertyStatus: "Resale",
+    propertyType: "apartment",
+    buildingCategory: "society",
+    propertyStatus: "resale",
 
-    apartmentName: "Sobha Meritta",
+    location: {
+      address: "Pudupakkam, OMR",
+      locality: "Pudupakkam",
+      city: "Chennai",
+      landmark: "Opp. to Butterfly Industries",
+    },
 
-    builtUpArea: 1337,
-    area: null,
-    uds: 435,
+    pricing: {
+      totalPrice: 8000000,
+      pricePerSqFt: 5983,
+      isNegotiable: false,
+      maintenanceCharge: 3500,
+    },
 
-    bhk: null,
-    furnishing: "Unfurnished",
-    doorFacing: "South",
+    areaDetails: {
+      builtUpAreaSqFt: 1337,
+      udsSqFt: 435,
+    },
 
-    ageOfHouse: 10,
-    noOfHouses: null,
-    noOfFloors: 13,
-    floorNo: 11,
-    noOfHousesPerFloor: 4,
+    residentialDetails: {
+      bhk: 3,
+      bathrooms: 2,
+      balconies: 1,
+      furnishing: "unfurnished",
+      doorFacing: "south",
+      ageOfPropertyYears: 10,
+      floorDetails: {
+        floorNo: 11,
+        totalFloors: 13,
+        unitsPerFloor: 4,
+      },
+      parking: {
+        coveredCar: 1,
+        openCar: 0,
+        twoWheeler: true,
+      },
+    },
 
-    rent: null,
-    deposit: null,
-    price: 8000000,
-    priceUnit: "Total",
+    societyDetails: {
+      societyName: "Sobha Meritta",
+      totalTowers: 5,
+    },
 
-    location: "Pudupakkam",
-    landmark: "Opp. to Butterfly Industries",
+    amenities: [
+      "Covered Car Parking",
+      "24/7 Security",
+      "Power Backup",
+      "Lift",
+      "Clubhouse Access",
+      "Gym",
+      "Swimming Pool"
+    ],
 
-    parking: "Covered Car Parking",
-
-    image: [],
+    images: [],
+    featured: false,
+    postedAt: "2026-03-18",
   },
 
 
   // ---------------------------------
-  // SALE 7
+  // PROPERTY 7: SOCIETY APARTMENT SALE
   // ---------------------------------
-
   {
     id: 7,
+    title: "3 BHK Spacious Apartment for Sale in Sobha Meritta",
     listingType: "sale",
-    propertyType: "Apartment",
-    propertyStatus: "Resale",
+    propertyType: "apartment",
+    buildingCategory: "society",
+    propertyStatus: "resale",
 
-    apartmentName: "Sobha Meritta",
+    location: {
+      address: "Pudupakkam, OMR",
+      locality: "Pudupakkam",
+      city: "Chennai",
+      landmark: "Opp. to Butterfly Industries",
+    },
 
-    builtUpArea: 1650,
-    area: null,
-    uds: 570,
+    pricing: {
+      totalPrice: 10000000,
+      pricePerSqFt: 6060,
+      isNegotiable: true,
+      maintenanceCharge: 4000,
+    },
 
-    bhk: null,
-    furnishing: "Semi Furnished",
-    doorFacing: "West",
+    areaDetails: {
+      builtUpAreaSqFt: 1650,
+      udsSqFt: 570,
+    },
 
-    ageOfHouse: 10,
-    noOfHouses: null,
-    noOfFloors: 13,
-    floorNo: 9,
-    noOfHousesPerFloor: 4,
+    residentialDetails: {
+      bhk: 3,
+      bathrooms: 3,
+      balconies: 2,
+      furnishing: "semi_furnished",
+      doorFacing: "west",
+      ageOfPropertyYears: 10,
+      floorDetails: {
+        floorNo: 9,
+        totalFloors: 13,
+        unitsPerFloor: 4,
+      },
+      parking: {
+        coveredCar: 1,
+        openCar: 0,
+        twoWheeler: true,
+      },
+    },
 
-    rent: null,
-    deposit: null,
-    price: 10000000,
-    priceUnit: "Total",
+    societyDetails: {
+      societyName: "Sobha Meritta",
+      totalTowers: 5,
+    },
 
-    location: "Pudupakkam",
-    landmark: "Opp. to Butterfly Industries",
+    amenities: [
+      "Modular Kitchen",
+      "Covered Car Parking",
+      "24/7 Gated Security",
+      "Power Backup",
+      "Clubhouse & Gym",
+      "Swimming Pool",
+      "Badminton Court"
+    ],
 
-    parking: null,
-
-    image: [],
+    images: [],
+    featured: true,
+    postedAt: "2026-03-20",
   },
 
 
   // ---------------------------------
-  // SALE 8
+  // PROPERTY 8: SOCIETY APARTMENT SALE
   // ---------------------------------
-
   {
     id: 8,
+    title: "3 BHK Semi-Furnished Flat in Sobha Meritta",
     listingType: "sale",
-    propertyType: "Apartment",
-    propertyStatus: "Resale",
+    propertyType: "flat",
+    buildingCategory: "society",
+    propertyStatus: "resale",
 
-    apartmentName: "Sobha Meritta",
+    location: {
+      address: "Pudupakkam, OMR",
+      locality: "Pudupakkam",
+      city: "Chennai",
+      landmark: "Opp. to Butterfly Industries",
+    },
 
-    builtUpArea: 1650,
-    area: null,
-    uds: 570,
+    pricing: {
+      totalPrice: 10000000,
+      pricePerSqFt: 6060,
+      isNegotiable: true,
+      maintenanceCharge: 4000,
+    },
 
-    bhk: null,
-    furnishing: "Semi Furnished",
-    doorFacing: "West",
+    areaDetails: {
+      builtUpAreaSqFt: 1650,
+      udsSqFt: 570,
+    },
 
-    ageOfHouse: 10,
-    noOfHouses: null,
-    noOfFloors: 13,
-    floorNo: 9,
-    noOfHousesPerFloor: 4,
+    residentialDetails: {
+      bhk: 3,
+      bathrooms: 3,
+      balconies: 2,
+      furnishing: "semi_furnished",
+      doorFacing: "west",
+      ageOfPropertyYears: 10,
+      floorDetails: {
+        floorNo: 9,
+        totalFloors: 13,
+        unitsPerFloor: 4,
+      },
+      parking: {
+        coveredCar: 1,
+        openCar: 0,
+        twoWheeler: true,
+      },
+    },
 
-    rent: null,
-    deposit: null,
-    price: 10000000,
-    priceUnit: "Total",
+    societyDetails: {
+      societyName: "Sobha Meritta",
+      totalTowers: 5,
+    },
 
-    location: "Pudupakkam",
-    landmark: "Opp. to Butterfly Industries",
+    amenities: [
+      "Modular Kitchen Work",
+      "Covered Car Parking",
+      "24/7 Security",
+      "Power Backup",
+      "Swimming Pool",
+      "Gymnasium"
+    ],
 
-    parking: null,
-
-    image: [],
+    images: [],
+    featured: false,
+    postedAt: "2026-03-22",
   },
 
 
   // ---------------------------------
-  // RENTAL 1
+  // PROPERTY 9: SOCIETY APARTMENT RENT
   // ---------------------------------
-
   {
     id: 9,
+    title: "3 BHK Semi-Furnished Apartment for Rent in Sobha Meritta",
     listingType: "rent",
-    propertyType: "Apartment",
-    propertyStatus: "Rental",
+    propertyType: "apartment",
+    buildingCategory: "society",
+    propertyStatus: "ready_to_move",
 
-    apartmentName: "Sobha Meritta",
+    location: {
+      address: "Pudupakkam, OMR",
+      locality: "Pudupakkam",
+      city: "Chennai",
+      landmark: "Opp. to Butterfly Industries",
+    },
 
-    builtUpArea: 1996,
-    area: null,
-    uds: null,
+    pricing: {
+      monthlyRent: 42500,
+      securityDeposit: 250000,
+      maintenanceCharge: 0,
+      isMaintenanceIncluded: true,
+    },
 
-    bhk: null,
-    furnishing: "Semi Furnished",
-    doorFacing: "East",
+    areaDetails: {
+      builtUpAreaSqFt: 1996,
+    },
 
-    ageOfHouse: null,
-    noOfHouses: null,
-    noOfFloors: 13,
-    floorNo: 9,
-    noOfHousesPerFloor: null,
+    residentialDetails: {
+      bhk: 3,
+      bathrooms: 3,
+      balconies: 2,
+      furnishing: "semi_furnished",
+      doorFacing: "east",
+      ageOfPropertyYears: 10,
+      floorDetails: {
+        floorNo: 9,
+        totalFloors: 13,
+      },
+      parking: {
+        coveredCar: 1,
+        openCar: 0,
+        twoWheeler: true,
+      },
+    },
 
-    rent: 42500,
-    deposit: null,
-    price: null,
-    priceUnit: null,
+    societyDetails: {
+      societyName: "Sobha Meritta",
+    },
 
-    location: "Pudupakkam",
-    landmark: "Opp. to Butterfly Industries",
+    rentalTerms: {
+      preferredTenants: ["family"],
+      lockInPeriodMonths: 11,
+      notes: "Rent includes maintenance charges and full access to community amenities.",
+    },
 
-    parking: null,
+    amenities: [
+      "Maintenance Included",
+      "Covered Parking Slot",
+      "Power Backup",
+      "24/7 Security",
+      "Swimming Pool",
+      "Gym Pass Access",
+      "Children's Play Area"
+    ],
 
-    rentalNotes:
-      "Rent includes maintenance and amenities inside the community.",
-
-    image: [p9_1, p9_2],
+    images: [p9_1, p9_2],
+    featured: true,
+    postedAt: "2026-03-25",
   },
 
 
   // ---------------------------------
-  // RENTAL 2
+  // PROPERTY 10: SOCIETY APARTMENT RENT
   // ---------------------------------
-
   {
     id: 10,
+    title: "2 BHK Fully Furnished Apartment for Rent in Sobha Meritta",
     listingType: "rent",
-    propertyType: "Apartment",
-    propertyStatus: "Rental",
+    propertyType: "apartment",
+    buildingCategory: "society",
+    propertyStatus: "ready_to_move",
 
-    apartmentName: "Sobha Meritta",
+    location: {
+      address: "Pudupakkam, OMR",
+      locality: "Pudupakkam",
+      city: "Chennai",
+      landmark: "Opp. to Butterfly Industries",
+    },
 
-    builtUpArea: 1337,
-    area: null,
-    uds: null,
+    pricing: {
+      monthlyRent: 36000,
+      securityDeposit: 200000,
+      maintenanceCharge: 0,
+      isMaintenanceIncluded: true,
+    },
 
-    bhk: null,
-    furnishing: "Fully Furnished",
-    doorFacing: "North",
+    areaDetails: {
+      builtUpAreaSqFt: 1337,
+    },
 
-    ageOfHouse: null,
-    noOfHouses: null,
-    noOfFloors: 13,
-    floorNo: 7,
-    noOfHousesPerFloor: null,
+    residentialDetails: {
+      bhk: 2,
+      bathrooms: 2,
+      balconies: 1,
+      furnishing: "fully_furnished",
+      doorFacing: "north",
+      ageOfPropertyYears: 10,
+      floorDetails: {
+        floorNo: 7,
+        totalFloors: 13,
+      },
+      parking: {
+        coveredCar: 1,
+        openCar: 0,
+        twoWheeler: true,
+      },
+    },
 
-    rent: 36000,
-    deposit: null,
-    price: null,
-    priceUnit: null,
+    societyDetails: {
+      societyName: "Sobha Meritta",
+    },
 
-    location: "Pudupakkam",
-    landmark: "Opp. to Butterfly Industries",
+    rentalTerms: {
+      preferredTenants: ["family", "bachelors"],
+      lockInPeriodMonths: 11,
+      notes: "Fully furnished setup with ACs, TV, beds, sofa, and kitchen appliances. Rent includes maintenance.",
+    },
 
-    parking: null,
+    amenities: [
+      "Fully Furnished Interiors",
+      "Air Conditioned",
+      "TV & Sofa Set",
+      "Washing Machine & Fridge",
+      "Covered Car Parking",
+      "24/7 Security",
+      "Clubhouse & Swimming Pool"
+    ],
 
-    rentalNotes:
-      "Rent includes maintenance and amenities inside the community.",
-
-    image: [p10_1, p10_2, p10_3, p10_4, p10_5, p10_6],
+    images: [p10_1, p10_2, p10_3, p10_4, p10_5, p10_6],
+    featured: true,
+    postedAt: "2026-03-28",
   },
 
 ];
