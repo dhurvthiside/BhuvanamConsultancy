@@ -277,7 +277,7 @@ export const assets = [
 
     societyDetails: {
       societyName: "Sobha Meritta",
-      totalTowers: 5,
+      totalTowers: 9,
     },
 
     amenities: [
@@ -409,7 +409,7 @@ export const assets = [
 
     societyDetails: {
       societyName: "Sobha Meritta",
-      totalTowers: 5,
+      totalTowers: 9,
     },
 
     amenities: [
@@ -479,7 +479,7 @@ export const assets = [
 
     societyDetails: {
       societyName: "Sobha Meritta",
-      totalTowers: 5,
+      totalTowers: 9,
     },
 
     amenities: [
@@ -549,7 +549,7 @@ export const assets = [
 
     societyDetails: {
       societyName: "Sobha Meritta",
-      totalTowers: 5,
+      totalTowers: 9,
     },
 
     amenities: [
